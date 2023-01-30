@@ -13,9 +13,9 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-light: #D58936;
+    --clr-dark: #3C1518;
+    --clr-accent: #F2F3AE;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -259,17 +259,8 @@ header {
 
 .intro__img {
     box-shadow: var(--bs);
-    -webkit-mask-image: linear-gradient(
-        rgb(0 0 0 / 1) 85%,
-        rgb(0 0 0 / 0.5) ,
-        rgb(0 0 0 / 0)
-    );
-    mask-image: linear-gradient( 
-        rgb(0 0 0 / 1) 85%,
-        rgb(0 0 0 / 0.5) ,
-        rgb(0 0 0 / 0)
-    );
-    border-radius:50%;
+    
+    
 }
 
 .section__subtitle--intro {
@@ -308,38 +299,34 @@ header {
 
 
 
-/*  My services section  */
+/*  My Reviews section  */
 
-.my-services {
+.my-reviews {
     background-color: var(--clr-dark);
-    background-image: url(../img/moon_camping.jpg);
+    background-image: url(../img/beachsunset.jpg);
     background-size: cover;
-    
-    
-    
-    /* background-blend-mode: multiply; */
-    color: var(--clr-light);
+    color: var(--clr-accent);
     text-align: center;
 }
 
-.section__title--services {
-    color: var(--clr-accent);
+.section__title--reviews {
+    color: var(--clr-light);
     position: relative;
     
 }
 
-.section__title--services::after {
+.section__title--reviews::after {
     
     content: '';
     display: block;
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: var(--clr-dark);
     opacity: 0.25;
 }
 
-.services {
+.reviews {
     margin-bottom: 4em;
     margin-top: 2em;
     -webkit-backdrop-filter: blur(12px);
@@ -349,29 +336,39 @@ header {
 
 }
 
-.service {
+.review {
     max-width: 500px;
     margin: 0 auto;
     
 }
 
 @media (min-width: 800px) {
-    .services {
+    .reviews {
         display: flex;
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
     
-    .service + .service {
+    .review + .review {
         margin-left: 2em;
     }
 }
 
 
+/*  My About me section  */
+
+
+
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    background-blend-mode: multiply;
+    color: var(--clr-accent)
+}
+
+.section__subtitle--about {
+    color: var(--clr-dark)
 }
 
 .about-me__img {
@@ -424,6 +421,9 @@ header {
 
 .my-work {
     background-color: var(--clr-dark);
+    background-image: url(../img/skywaybridgesunset.jpg);
+    background-size: cover;
+    
     color: var(--clr-light);
     text-align: center;    
 }
@@ -431,6 +431,9 @@ header {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .portfolio__item {
@@ -518,12 +521,15 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
+    color: var(--clr-accent)
 }
 
 .portfolio-item-individual img {
     margin-bottom: 2em;
     margin-top: 1em;
-
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
 }
 
 .long {
